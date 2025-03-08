@@ -22,7 +22,9 @@ function atualizarBarra(barraElement, textoElement, atual, maximo, temporario = 
     textoElement.textContent = texto;
 
     // Aplica o efeito de fogo com a cor baseada na energia
-    textoElement.style.background = `linear-gradient(90deg, rgba(${corFogo}, 0.5), rgba(255, 200, 0, 0.5))`;
+    if (textoElement.classList.contains("efeito-fogo")) {
+        textoElement.style.background = `linear-gradient(90deg, rgba(${corFogo}, 0.5), rgba(255, 200, 0, 0.5))`;
+    }
 }
 
 // Função para carregar a ficha com base no ID do jogador
