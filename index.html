@@ -1,44 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha do Jogador</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="ficha">
-        <div class="foto">
-            <img src="imagens/jogador1.jpg" alt="Foto do Jogador">
-        </div>
-        <div class="info">
-            <h2 id="nome">Nome do Jogador</h2>
-            <div class="barra-container">
-                
-                <div class="barra">
-                    <img src="imagens/VidaBarEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <img src="imagens/VidaBar.png" alt="Barra de Vida" class="barra-fill" id="vida-bar">
-                    <div class="barra-texto" id="vida-texto"></div>
-                </div>
-            </div>
-            <div class="barra-container">
-               
-                <div class="barra">
-                    <img src="imagens/IntegridadeBarEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <img src="imagens/IntegridadeBar.png" alt="Barra de Integridade" class="barra-fill" id="integridade-bar">
-                    <div class="barra-texto" id="integridade-texto"></div>
-                </div>
-            </div>
-            <div class="barra-container">
-               
-                <div class="barra">
-                    <img src="imagens/EnergiaBarEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <img src="imagens/EnergiaBar.png" alt="Barra de Energia" class="barra-fill" id="energia-bar">
-                    <div class="barra-texto" id="energia-texto"></div>
-                </div>
-            </div>
-        </div>
+<div class="barra-container">
+    <p>Vida:</p>
+    <div class="barra">
+        <img src="imagens/VidaBarEmpty.png" alt="Barra Vazia" class="barra-empty">
+        <img src="imagens/VidaBar.png" alt="Barra de Vida" class="barra-fill" id="vida-bar">
+        <div class="barra-texto" id="vida-texto"></div>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
+</div>
+<div class="barra-container">
+    <p>Integridade:</p>
+    <div class="barra">
+        <img src="imagens/IntegridadeBarEmpty.png" alt="Barra Vazia" class="barra-empty">
+        <img src="imagens/IntegridadeBar.png" alt="Barra de Integridade" class="barra-fill" id="integridade-bar">
+        <div class="barra-texto" id="integridade-texto"></div>
+    </div>
+</div>
+<div class="barra-container">
+    <p>Energia Amaldiçoada:</p>
+    <div class="barra barra-energia">
+        <img src="imagens/EnergiaBarEmpty.png" alt="Barra Vazia" class="barra-empty">
+        <img src="imagens/EnergiaBar.png" alt="Barra de Energia" class="barra-fill" id="energia-bar">
+        <div class="barra-texto texto-esquerda efeito-fogo" id="energia-texto"></div>
+    </div>
+</div>
