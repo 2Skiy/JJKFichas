@@ -11,7 +11,7 @@ async function fetchRangeData(range) {
 }
 
 // Função para atualizar a barra de status e o texto
-function atualizarBarra(barraElement, textoElement, atual, maximo, temporario = 0) {
+function atualizarBarra(barraElement, textoElement, atual, maximo, temporario = 0, corFogo = "255, 100, 0") {
     const porcentagem = (atual / maximo) * 100;
     barraElement.style.clipPath = `inset(0 ${100 - porcentagem}% 0 0)`;
 
@@ -20,6 +20,9 @@ function atualizarBarra(barraElement, textoElement, atual, maximo, temporario = 
         texto += ` +${Math.round(temporario)}`;
     }
     textoElement.textContent = texto;
+
+    // Aplica o efeito de fogo com a cor baseada na energia
+    textoElement.style.background = `linear-gradient(90deg, rgba(${corFogo}, 0.5), rgba(255, 200, 0, 0.5))`;
 }
 
 // Função para carregar a ficha com base no ID do jogador
@@ -56,6 +59,9 @@ async function carregarFicha(jogadorId) {
     const energiaMaxima = parseFloat(allData.maxEnergy[0].join(" "));
     const energiaTemp = parseFloat(allData.tempEnergy[0].join(" "));
 
+    // Define a cor do efeito de fogo com base na energia
+    const corFogo = `255, ${100 + (energiaAtual / energiaMaxima) * 155}, 0`;
+
     // Atualiza o nome e a foto
     document.getElementById("nome").textContent = nome;
     document.querySelector(".foto img").src = `imagens/jogador${jogadorId + 1}.jpg`;
@@ -80,7 +86,8 @@ async function carregarFicha(jogadorId) {
         document.getElementById("energia-texto"),
         energiaAtual,
         energiaMaxima,
-        energiaTemp
+        energiaTemp,
+        corFogo
     );
 }
 
