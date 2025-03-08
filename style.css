@@ -101,25 +101,45 @@ body {
 }
 
 /* Efeito de fogo atrás do texto */
-.barra-texto.efeito-fogo {
-    background: linear-gradient(90deg, rgba(255, 100, 0, 0.5), rgba(255, 200, 0, 0.5));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: efeitoFogo 2s infinite alternate;
+.fire-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    z-index: 0; /* Fogo atrás do texto */
 }
 
-@keyframes efeitoFogo {
+.fire {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #ff9900;
+    filter: blur(20px) contrast(30);
+    border: 50px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 40%;
+    box-sizing: border-box;
+    transform: scale(0.4, 1);
+}
+
+.fire .burn {
+    position: absolute;
+    top: 100px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 100%;
+    animation: burning 3000ms infinite linear;
+}
+
+@keyframes burning {
     0% {
-        text-shadow: 0 0 5px rgba(255, 100, 0, 0.8), 0 0 10px rgba(255, 200, 0, 0.8);
+        transform: translateY(0);
     }
     100% {
-        text-shadow: 0 0 10px rgba(255, 200, 0, 0.8), 0 0 20px rgba(255, 100, 0, 0.8);
+        transform: translateY(-200px);
     }
-}
-
-/* Ajustes específicos para a barra de energia */
-.barra-energia {
-    margin-left: -20px; /* Move a barra para a esquerda */
-    width: 120%; /* Aumenta o comprimento da barra */
 }
