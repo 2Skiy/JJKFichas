@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'a_annyeong_haseyo';
+    src: url('fonts/a_annyeong_haseyo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'a_annyeong_haseyo', Arial, sans-serif;
     background-color: #1e1e1e;
     color: #ffffff;
     margin: 0;
@@ -11,46 +18,70 @@ body {
 }
 
 #ficha {
+    display: flex;
+    align-items: flex-start;
     background-color: #2d2d2d;
     border: 1px solid #444;
     border-radius: 10px;
     padding: 15px;
-    width: 200px;
-    text-align: center;
+    width: 400px;
 }
 
-#ficha img {
+.foto img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-right: 20px;
 }
 
-#ficha h2 {
+.info {
+    flex: 1;
+}
+
+.info h2 {
     margin: 0 0 10px;
     color: #ffcc00;
 }
 
+.barra-container {
+    margin-bottom: 10px;
+}
+
+.barra-container p {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
 .barra {
-    background-color: #444;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 5px 0;
+    position: relative;
+    width: 100%;
+    height: 20px;
 }
 
-.barra .preenchimento {
-    height: 10px;
-    border-radius: 5px;
+.barra img.barra-empty {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.barra.vida .preenchimento {
-    background-color: #ff4444;
+.barra img.barra-fill {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(0 0 0 0); /* Ajuste dinâmico via JavaScript */
 }
 
-.barra.integridade .preenchimento {
-    background-color: #44ff44;
-}
-
-.barra.energia .preenchimento {
-    background-color: #4444ff;
+.barra-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 2;
 }
