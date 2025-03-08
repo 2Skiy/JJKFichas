@@ -1,6 +1,6 @@
 // Configurações da API do Google Sheets
 const sheetId = "1ljNI4XHJ_Q47PoiETwMM25DWBpTp3KvkBIKw9drJmVE"; // ID da planilha
-const apiKey = "SUA_CHAVE_DE_API_AQUI"; // Substitua pela sua chave de API
+const apiKey = "AIzaSyCyisUuZCAbV0fIM8xsdqB0SOj57UgpX9Y"; // Substitua pela sua chave de API
 
 // Função para buscar os dados de um intervalo específico
 async function fetchRangeData(range) {
