@@ -1,4 +1,4 @@
-v@font-face {
+@font-face {
     font-family: 'a_annyeong_haseyo';
     src: url('fonts/a_annyeong_haseyo.ttf') format('truetype');
     font-weight: normal;
@@ -7,7 +7,7 @@ v@font-face {
 
 body {
     font-family: 'a_annyeong_haseyo', Arial, sans-serif;
-    background-color: #000;
+    background-color: #1e1e1e;
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -20,7 +20,9 @@ body {
 #ficha {
     display: flex;
     align-items: flex-start;
-    background-color: #000;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 10px;
     padding: 15px;
     width: 400px;
 }
@@ -37,38 +39,36 @@ body {
 }
 
 .info h2 {
-        border-radius: 50%;
     margin: 0 0 10px;
-    color: #ffffff;
+    color: #ffcc00;
 }
 
 .barra-container {
-        border-radius: 50%;
     margin-bottom: 10px;
 }
 
 .barra-container p {
-        border-radius: 50%;
     margin: 0 0 5px;
     font-size: 14px;
 }
 
 .barra {
     position: relative;
-        border-radius: 50%;
     width: 100%;
     height: 20px;
     margin: 5px 0;
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
 }
 
 .barra img.barra-empty {
-        border-radius: 50%;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1; /* Fundo da barra */
+    border-radius: 10px; /* Bordas arredondadas */
 }
 
 .barra img.barra-fill {
@@ -79,18 +79,25 @@ body {
     left: 0;
     clip-path: inset(0 0 0 0); /* Ajuste dinâmico via JavaScript */
     z-index: 2; /* Preenchimento da barra */
+    border-radius: 10px; /* Bordas arredondadas */
 }
 
 .barra-texto {
     position: absolute;
     top: 50%;
-    left: 10px; /* Alinhado à esquerda */
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-shadow: 1px 1px 2px black;
     font-size: 14px;
     pointer-events: none;
     z-index: 3; /* Texto acima das barras */
+}
+
+/* Texto da barra de energia alinhado à esquerda */
+.barra-energia .barra-texto.texto-esquerda {
+    left: 10px; /* Alinhado à esquerda */
+    transform: translateY(-50%); /* Mantém o alinhamento vertical */
 }
 
 /* Efeito de fogo atrás do texto */
@@ -113,8 +120,6 @@ body {
 
 /* Ajustes específicos para a barra de energia */
 .barra-energia {
-    margin-left: -113px; /* Move a barra para a esquerda */
-    transform: translateY(20%);
-    height: 30px;
-    width: 140%; /* Aumenta o comprimento da barra */
+    margin-left: -20px; /* Move a barra para a esquerda */
+    width: 120%; /* Aumenta o comprimento da barra */
 }
