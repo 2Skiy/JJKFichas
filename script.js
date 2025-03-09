@@ -58,7 +58,6 @@ async function carregarFicha(jogadorId) {
 
     // Atualiza o nome e a foto
     document.getElementById("nome").textContent = nome;
-    document.querySelector(".foto img").src = `imagens/jogador${jogadorId + 1}.jpg`;
 
     // Atualiza as barras e textos
     atualizarBarra(
