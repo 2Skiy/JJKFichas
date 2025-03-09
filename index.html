@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha do Jogador</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --cor-barra: #205238; /* Cor padrão */
+            --cor-fogo: #42c947; /* Cor padrão do fogo */
+        }
+    </style>
 </head>
 <body>
     <div id="ficha">
         <div class="foto">
-            <img src="imagens/jogador1.jpg" alt="Foto do Jogador">
+            <img src="imagens/jogador1.jpg" alt="Foto do Jogador" id="foto-jogador">
         </div>
         <div class="info">
             <h2 id="nome">Nome do Jogador</h2>
@@ -18,7 +24,7 @@
             <div class="barra-container" id="vida-container">
                 <div class="barra">
                     <img src="imagens/VidaBarEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <img src="imagens/VidaBar.png" alt="Barra de Vida" class="barra-fill" id="vida-bar">
+                    <div class="barra-fill" id="vida-bar"></div>
                     <div class="barra-texto" id="vida-texto"></div>
                 </div>
             </div>
@@ -27,21 +33,22 @@
             <div class="barra-container" id="integridade-container">
                 <div class="barra">
                     <img src="imagens/IntegridadeEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <img src="imagens/IntegridadeBar.png" alt="Barra de Integridade" class="barra-fill" id="integridade-bar">
+                    <div class="barra-fill" id="integridade-bar"></div>
                     <div class="barra-texto" id="integridade-texto"></div>
                 </div>
             </div>
 
-             <!-- Efeito de Fogo -->
+            <!-- Efeito de Fogo -->
             <div class="fogo-container">
                 <img src="imagens/fogogif.gif" alt="Efeito de Fogo" class="fogo-gif">
+                <div class="fogo-overlay"></div>
             </div>
             
             <!-- Barra de Energia -->
             <div class="barra-container" id="energia-container">
                 <div class="barra barra-energia">
                     <img src="imagens/EnergiaEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <img src="imagens/EnergiaBar.png" alt="Barra de Energia" class="barra-fill" id="energia-bar">
+                    <div class="barra-fill" id="energia-bar"></div>
                     <div class="barra-texto texto-esquerda" id="energia-texto"></div>
                 </div>
             </div>
