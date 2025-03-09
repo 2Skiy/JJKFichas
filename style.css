@@ -73,10 +73,22 @@ body {
 }
 
 .barra .barra-fill {
-    background-color: var(--cor-barra);
     z-index: 2;
     clip-path: inset(0 0 0 0);
     transition: clip-path 0.3s ease;
+}
+
+/* Cores específicas para cada barra */
+.vida-fill {
+    background-color: #205238; /* Cor da barra de vida */
+}
+
+.integridade-fill {
+    background-color: #42c947; /* Cor da barra de integridade */
+}
+
+.energia-fill {
+    background-color: #36251e; /* Cor da barra de energia */
 }
 
 .barra-texto {
@@ -109,6 +121,9 @@ body {
     height: 30vmin;
     mix-blend-mode: lighten;
     pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .fogo-gif {
