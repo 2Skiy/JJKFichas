@@ -7,7 +7,7 @@
 
 body {
     font-family: 'a_annyeong_haseyo', Arial, sans-serif;
-    background-color: #1e1e1e;
+    background-color: #RRGGBBAA;
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -20,9 +20,7 @@ body {
 #ficha {
     display: flex;
     align-items: flex-start;
-    background-color: #2d2d2d;
-    border: 1px solid #444;
-    border-radius: 10px;
+    background-color: #RRGGBBAA;
     padding: 15px;
     width: 400px;
 }
@@ -45,41 +43,35 @@ body {
 
 .barra-container {
     margin-bottom: 10px;
-}
-
-.barra-container p {
-    margin: 0 0 5px;
-    font-size: 14px;
+    position: relative;
 }
 
 .barra {
     position: relative;
     width: 100%;
-    height: 20px;
-    margin: 5px 0;
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
-}
-
-.barra img.barra-empty {
-    width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Fundo da barra */
-    border-radius: 10px; /* Bordas arredondadas */
+    margin: 5px 0;
+    overflow: hidden;
 }
 
+.barra img.barra-empty,
 .barra img.barra-fill {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    clip-path: inset(0 0 0 0); /* Ajuste dinâmico via JavaScript */
-    z-index: 2; /* Preenchimento da barra */
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 5px;
+}
+
+.barra img.barra-empty {
+    z-index: 1;
+}
+
+.barra img.barra-fill {
+    filter: brightness(1.5);
+    z-index: 2;
+    clip-path: inset(0 0 0 0);
 }
 
 .barra-texto {
@@ -91,23 +83,45 @@ body {
     text-shadow: 1px 1px 2px black;
     font-size: 14px;
     pointer-events: none;
-    z-index: 3; /* Texto acima das barras */
+    z-index: 3; /* Texto na frente da barra */
+    white-space: nowrap;
 }
 
-/* Texto da barra de energia alinhado à esquerda */
-.barra-energia .barra-texto.texto-esquerda {
-    left: 10px; /* Alinhado à esquerda */
-    transform: translateY(-50%); /* Mantém o alinhamento vertical */
+.barra-texto.texto-esquerda {
+    left: 10px;
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 4; /* Texto da energia na frente de tudo */
 }
 
-/* GIF animado atrás do texto */
+#vida-container {
+    width: 110%;
+    height: 25px;
+    transform: translate(-8%, -30%);
+}
+
+#integridade-container {
+    width: 90%;
+    height: 14px;
+    transform: translate(0%, -70%);
+}
+
+#energia-container {
+    width: 140%;
+    height: 30px;
+    transform: translate(-27%, 11%);
+}
+
 .fogo-gif {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+    mix-blend-mode: lighten;
+    transform: translate(-130%, -65%);
+    width: 230px;
     height: auto;
-    z-index: 0; /* Fogo atrás do texto */
-    opacity: 0.8; /* Ajuste a opacidade conforme necessário */
+    z-index: 1; /* Fogo atrás do texto, mas na frente da barra */
+    opacity: 0.8;
+  filter: brightness(1.5);
+
 }
