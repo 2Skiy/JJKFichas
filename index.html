@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha do Jogador</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --cor-fogo: #42c947; /* Cor padrão do fogo */
+        }
+    </style>
 </head>
 <body>
     <div id="ficha">
@@ -18,7 +23,7 @@
             <div class="barra-container" id="vida-container">
                 <div class="barra">
                     <img src="imagens/VidaBarEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <div class="barra-fill vida-fill" id="vida-bar"></div>
+                    <img src="imagens/VidaBar.png" alt="Barra de Vida" class="barra-fill" id="vida-bar">
                     <div class="barra-texto" id="vida-texto"></div>
                 </div>
             </div>
@@ -27,7 +32,7 @@
             <div class="barra-container" id="integridade-container">
                 <div class="barra">
                     <img src="imagens/IntegridadeEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <div class="barra-fill integridade-fill" id="integridade-bar"></div>
+                    <img src="imagens/IntegridadeBar.png" alt="Barra de Integridade" class="barra-fill" id="integridade-bar">
                     <div class="barra-texto" id="integridade-texto"></div>
                 </div>
             </div>
@@ -42,7 +47,7 @@
             <div class="barra-container" id="energia-container">
                 <div class="barra barra-energia">
                     <img src="imagens/EnergiaEmpty.png" alt="Barra Vazia" class="barra-empty">
-                    <div class="barra-fill energia-fill" id="energia-bar"></div>
+                    <img src="imagens/EnergiaBar.png" alt="Barra de Energia" class="barra-fill" id="energia-bar">
                     <div class="barra-texto texto-esquerda" id="energia-texto"></div>
                 </div>
             </div>
