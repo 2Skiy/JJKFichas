@@ -114,7 +114,6 @@ body {
     width: 149%;
     height: 100px;
     transform: translate(-18.7%, 153%);
-    background-color: var(--cor-barra); /* Usando a variável CSS */
 }
 
 .fogo-gif {
@@ -136,7 +135,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--cor-fogo); /* Usando a variável CSS */
+    background-color: var(--cor-fogo); /* Cor do fogo */
     mix-blend-mode: lighten;
     opacity: 0.5;
+}
+
+.barra-energia .barra-fill {
+    filter: brightness(1.5) hue-rotate(90deg); /* Aplica a cor da energia */
+    background-color: var(--cor-energia); /* Cor da barra de energia */
 }
