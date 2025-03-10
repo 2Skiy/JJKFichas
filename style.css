@@ -11,20 +11,17 @@ body {
     color: #ffffff;
     margin: 0;
     padding: 0;
-
 }
 
 #ZE {
-      transform: translateX(120%);
-      opacity: 1;
+    transform: translateX(120%);
+    opacity: 1;
     z-index: 9; /* Texto na frente da barra */
-
 }
 
 #ficha {
     display: flex;
     align-items: flex-start;
-    background-color: #RRGGBBAA;
     padding: 15px;
     width: 90%;
 }
@@ -117,6 +114,7 @@ body {
     width: 149%;
     height: 100px;
     transform: translate(-18.7%, 153%);
+    background-color: var(--cor-barra); /* Usando a variável CSS */
 }
 
 .fogo-gif {
@@ -129,6 +127,16 @@ body {
     height: auto;
     z-index: 1; /* Fogo atrás do texto, mas na frente da barra */
     opacity: 1;
-  filter: brightness(1.5);
+    filter: brightness(1.5);
+}
 
+.fogo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-fogo); /* Usando a variável CSS */
+    mix-blend-mode: lighten;
+    opacity: 0.5;
 }
