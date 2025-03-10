@@ -27,7 +27,7 @@ body {
     height: 500px;
     border-radius: 50%;
     margin-right: 20px;
-    transform: translate(0%, -15%);
+    transform: translate(40%, -15%);
 }
 
 .info {
@@ -35,7 +35,7 @@ body {
 }
 
 .info h2 {
-    transform: translate(0%, 40%);
+    transform: translate(10%, 40%);
     margin: 0 0 10px;
     font-size: 100px;
     color: #ffffff;
@@ -97,19 +97,19 @@ body {
 #vida-container {
     width: 110%;
     height: 100px;
-    transform: translate(0%, 60%);
+    transform: translate(10%, 60%);
 }
 
 #integridade-container {
     width: 90%;
     height: 40px;
-    transform: translate(10.8%, 160%);
+    transform: translate(23%, 160%);
 }
 
 #energia-container {
     width: 149%;
     height: 100px;
-    transform: translate(-26%, 170%);
+    transform: translate(-18.7%, 160%);
 }
 
 .fogo-gif {
@@ -117,7 +117,7 @@ body {
     top: 50%;
     left: 50%;
     mix-blend-mode: lighten;
-    transform: translate(-176%, -58%);
+    transform: translate(-159%, -48%);
     width: 700px;
     height: auto;
     z-index: 1; /* Fogo atrás do texto, mas na frente da barra */
