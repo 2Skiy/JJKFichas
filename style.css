@@ -124,7 +124,7 @@ body {
     top: 50%;
     left: 50%;
     mix-blend-mode: lighten;
-    transform: translate(-159%, -48%);
+    transform: translate(-159%, -68%);
     width: 700px;
     height: auto;
     z-index: 1; /* Fogo atrás do texto, mas na frente da barra */
