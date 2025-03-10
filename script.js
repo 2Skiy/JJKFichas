@@ -23,7 +23,7 @@ if (planilhas[planilhaId]) {
 document.getElementById("foto-jogador").src = `imagens/${fotoJogador}`;
 
 // Configurações da API do Google Sheets
-const apiKey = "SUA_API_KEY"; // Substitua pela sua chave de API
+const apiKey = "AIzaSyCyisUuZCAbV0fIM8xsdqB0SOj57UgpX9Y"; // Substitua pela sua chave de API
 
 async function fetchRangeData(range) {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${planilhaId}/values/${range}?key=${apiKey}`;
