@@ -3,9 +3,9 @@ const urlParams = new URLSearchParams(window.location.search);
 
 // Mapeamento de planilhas para cores
 const planilhas = {
-    "1jvuzyQLHbxNj_FDrNVARRf8LK6zyBBUI1fEvt69hLLs": { cor: "#205238", fogo: "#42c947" },
-    "1Pp1lNOLswuuMvZf5NLEgM_XbozUQ6jLg5JPFFRzeDNY": { cor: "#42c947", fogo: "#205238" },
-    "1q0dToeheZKbMiEEQr8Ofxe2Q9ONvDqdGxPPnsMMH7f0": { cor: "#36251e", fogo: "#ff0000" }
+    "1jvuzyQLHbxNj_FDrNVARRf8LK6zyBBUI1fEvt69hLLs": { fogo: "#42c947", energia: "#205238" },
+    "1Pp1lNOLswuuMvZf5NLEgM_XbozUQ6jLg5JPFFRzeDNY": { fogo: "#ff0000", energia: "#42c947" },
+    "1q0dToeheZKbMiEEQr8Ofxe2Q9ONvDqdGxPPnsMMH7f0": { fogo: "#ff9900", energia: "#36251e" }
 };
 
 // Parâmetros da URL
@@ -15,8 +15,8 @@ const fotoJogador = urlParams.get("foto") || `jogador${jogadorId + 1}.jpg`; // F
 
 // Aplicar cores personalizadas com base na planilha
 if (planilhas[planilhaId]) {
-    document.documentElement.style.setProperty('--cor-barra', planilhas[planilhaId].cor);
     document.documentElement.style.setProperty('--cor-fogo', planilhas[planilhaId].fogo);
+    document.documentElement.style.setProperty('--cor-energia', planilhas[planilhaId].energia);
 }
 
 // Atualizar foto
