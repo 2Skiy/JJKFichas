@@ -16,7 +16,7 @@ body {
 
 #ZE {
       transform: translateX(120%);
-      opacity: 0;
+      opacity: 1;
 }
 
 #ficha {
