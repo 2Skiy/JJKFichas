@@ -15,8 +15,15 @@ const fotoJogador = urlParams.get("foto") || `jogador${jogadorId + 1}.jpg`; // F
 
 // Aplicar cores personalizadas com base na planilha
 if (planilhas[planilhaId]) {
-    document.documentElement.style.setProperty('--cor-fogo', planilhas[planilhaId].fogo);
-    document.documentElement.style.setProperty('--cor-energia', planilhas[planilhaId].energia);
+    const { fogo, energia } = planilhas[planilhaId];
+
+    // Aplicar cor do fogo
+    const fogoOverlay = document.querySelector(".fogo-overlay");
+    fogoOverlay.style.backgroundColor = fogo;
+
+    // Aplicar cor da barra de energia
+    const energiaBar = document.getElementById("energia-bar");
+    energiaBar.style.backgroundColor = energia;
 }
 
 // Atualizar foto
